@@ -1,1 +1,187 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jacob Davis Resume</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<style>
+	html {
+	  width: 98%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  max-width: 992px;
+	}
+
+	section {
+		margin-left: auto;
+		margin-right: auto;
+		width: 98%;
+	}
+
+	body {
+		font-size: 1em;
+		font-family: 'Georgia', 'serif';
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a:visited {
+		color: blue;
+	}
+
+	#header {
+		font-family: 'Lato', 'sans-serif';
+	}
+
+	table {
+		width: 100%;
+	}
+
+	thead {
+		font-family: 'Lato', 'sans-serif';
+		font-weight: bold;
+		font-size: 0.833em;
+	}
+
+	#skills table {
+		line-height: 1.5em;
+	}
+
+	#skills tr {
+		font-size: 0.917em;
+	}
+
+	td {
+		width: 33%;
+		text-align: center;
+	}
+
+	#header td:first-child {
+		text-align: left;
+	}
+
+	#header td:last-child {
+		text-align: right;
+	}
+
+	h1 {
+		font-family: 'Lato', 'sans-serif';
+		font-size: 1.67em;
+		text-align: center;
+	}
+
+	h2 {
+		font-family: 'Lato Black', 'Lato', 'sans-serif';
+		font-size: 0.75em;
+	}
+
+	h3 {
+		font-size: 1em;
+		font-weight: normal;
+	}
+
+	p, ul {
+		font-size: 0.917em;
+	}
+
+	hr {
+		height: 0.1em;
+		border: 0;
+		background-color: black;
+		margin-top: 1.5em;
+		margin-bottom: -5px;
+	}
+
+	.right {
+		float: right;
+	}
+</style>
+<body>
+	<section id='header'>
+		<h1>JACOB DAVIS</h1>
+		<table>
+			<tr>
+				<td>Cupertino, CA</td>
+				<td><a href='mailto:jsdavis1010@gmail.com'>jsdavis1010@gmail.com</a></td>
+				<td><a href='tel:(408)-807-9572'>(408) 807-9572</a></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href='https://github.com/jsdavis'>GitHub</a></td>
+				<td><a href='linkedin.com/in/jsdavis1010'>LinkedIn</a></td>
+			</tr>
+		</table>
+	</section>
+
+	<hr />
+	<section id='education'>
+		<h2>EDUCATION</h2>
+		<h3>University of California, San Diego Sept ’14 – Jun ‘18</h3>
+		<ul>
+			<li>B.S. in Computer Science, expected June 2018. 3.363 GPA</li>
+		</ul>
+	</section>
+
+	<hr />
+	<section id='experience'>
+		<h2>WORK EXPERIENCE</h2>
+		<h3>Teradata – Database Intern<span class='right'>Jun – Sept 2017</span></h3>
+		<ul>
+			<li>Developed internal database scaling tool for Systems Integration Testing team. Result was a Python script that generated SQL queries that could scale databases up to arbitrary sizes. Tested to scale data up from 22GB to 2TB in about 4 hours</li>
+		</ul>
+		<h3>Yahoo! – Production Engineering Intern<span class='right'>Jun – Sept 2016</span></h3>
+		<ul>
+			<li>Developed an internal health dashboard of Iris Messenger product, to be used by the Fantasy Sports team as part of a cross-product collaboration. Created a REST API to digest and display useful server metrics on a web-based dashboard interface</li>
+		</ul>
+		<h3>Lam Research – IT R&amp;D Intern<span class='right'>Jun – Sept 2015</span></h3>
+		<ul>
+			<li>Ran a proof-of-concept on Splunk as a product. Used historical log data and 3 test servers to install, configure, and manage a small Splunk instance. Created 3 custom dashboards for Lam’s needs, and presented findings to the CIO. Proof-of-concept was successful; the department spent $100K on Splunk when I left</li>
+		</ul>
+	</section>
+
+	<hr />
+	<section id='leadership'>
+		<h2>LEADERSHIP</h2>
+		<h3>Computer Science and Engineering Society<span class='right'>Sept ’14 – Jun ‘18</span></h3>
+		<ul>
+			<li>VP Finance, 2017/18 – Found &gt;$9000 in unused money after uncovering oversights from previous VP’s. Also hosting 2-3 educational workshops per quarter</li>
+			<li>President, 2016/17 – Successfully increased CSES GBM attendance by over 200%, significantly improved board member participation, and hosted twice the number of events as in previous years</li>
+			<li>CSE Day Co-Chair, 2015/16 – Increased attendance by 10% over previous year, and garnered most successful sponsorship in CSES history, with first ever profitable CSE Day</li>
+		</ul>
+	</section>
+
+	<hr />
+	<section id='skills'>
+		<h2>SKILLS</h2>
+		<table>
+			<thead>
+				<td>FAMILIAR</td>
+				<td>INTERMEDIATE</td>
+				<td>ADVANCED</td>
+			</thead>
+			<tr>
+				<td>PHP</td>
+				<td>Java</td>
+				<td>Python</td>
+			</tr>
+			<tr>
+				<td>C/C++</td>
+				<td>Splunk</td>
+				<td>SQL (esp. Teradata)</td>
+			</tr>
+			<tr>
+				<td>OCaml</td>
+				<td>HTML/CSS</td>
+				<td>JavaScript (Client &amp; Server)</td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>
