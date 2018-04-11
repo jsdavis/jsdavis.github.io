@@ -8,5 +8,3 @@ resume_location: 'Cupertino, CA'
 
 sass:
   style: 'compressed'
-
-source: '_src'
