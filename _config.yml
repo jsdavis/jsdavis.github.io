@@ -1,7 +1,12 @@
-title: "Jacob Davis"
+title: 'Jacob Davis'
 email: 'jsdavis1010@gmail.com'
 phone: '(408)-807-9572'
-description: "My Resume"
+description: 'My Resume'
 
-resume_name: "JACOB DAVIS"
-resume_location: "Cupertino, CA"
+resume_name: 'JACOB DAVIS'
+resume_location: 'Cupertino, CA'
+
+sass:
+  style: 'compressed'
+
+source: '_src'
