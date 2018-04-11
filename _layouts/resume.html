@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jacob Davis Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <section id='header'>
+    <h1>{{ site.resume_name }}</h1>
+    <table>
+      <tr>
+        <td>Cupertino, CA</td>
+        <td><a href='mailto://{{ site.email }}'>{{ site.email }}</a></td>
+        <td><a href='tel://{{ site.phone }}'>{{ site.phone }}</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        {% for link in site.data.links %}
+        <td><a href='{{ link.href }}'>{{ link.text }}</a></td>
+        {% endfor %}
+      </tr>
+    </table>
+  </section>
+
+  <hr />
+  <section id='education'>
+    <h2>EDUCATION</h2>
+    {% for edu in site.data.education %}
+    <h3>{{ edu.school }}<time class='right'>{{ edu.start }} – {{ edu.end }}</time></h3>
+    <ul>
+      <li>{{ edu.degree }} expected June 2018. {{ edu.gpa }} GPA</li>
+    </ul>
+    {% endfor %}
+  </section>
+
+  <hr />
+  <section id='experience'>
+    <h2>WORK EXPERIENCE</h2>
+		{% for job in site.data.experience %}
+    <h3>{{ job.company }} – {{ job.role }}<time class='right'>{{ job.start }} – {{ job.end }}</time></h3>
+    <ul>
+    	{% for task in job.tasks %}
+      <li>{{ task }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+
+  <hr />
+  <section id='leadership'>
+    <h2>LEADERSHIP</h2>
+    {% for pos in site.data.leadership %}
+    <h3>{{ pos.org }}<time class='right'>{{ pos.start }} – {{ pos.end }}</time></h3>
+    <ul>
+      {% for position in pos.positions %}
+      <li>{{ position }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+
+  <hr />
+  <section id='skills'>
+    <h2>SKILLS</h2>
+    <ul>
+      <li>Advanced – Python ● SQL (esp. Teradata) ● JavaScript (Client &amp; Server) ● HTML/CSS</li>
+      <li>Intermediate – Java ● Splunk ● PHP ● C/C++</li>
+  </section>
+</body>
+</html>

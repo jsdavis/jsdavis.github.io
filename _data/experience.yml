@@ -1,0 +1,46 @@
+- company: 'UCSD CSE Department'
+  role: 'Advanced Software Engineering Tutor'
+  start: 'Mar 2018'
+  end: 'Jun 2018'
+  tasks:
+    - 'Working as an official tutor for the Advanced Software Engineering course on campus. Assisting the professor in designing course curriculum, running weekly discussion sections for a class of 140 students, and giving students advise on good software engineering practices to follow'
+  skills:
+    - 'Agile Software Development'
+    - 'Project Management'
+    - 'JavaScript'
+    - 'Node.js'
+    - 'HTML'
+    - 'CSS'
+- company: 'Teradata'
+  role: 'Database Intern'
+  start: 'Jun 2017'
+  end: 'Sept 2017'
+  tasks:
+    - 'Developed internal database scaling tool for Systems Integration Testing team. Result was a Python script that generated SQL queries that could scale databases up to arbitrary sizes. Tested to scale data up from 22GB to 2TB in about 4 hours'
+  skills:
+    - 'Python'
+    - 'SQL'
+    - 'Jenkins'
+    - 'Automated Testing'
+- company: 'Yahoo!'
+  role: 'Production Engineering Intern'
+  start: 'Jun 2016'
+  end: 'Sept 2016'
+  tasks:
+    - 'Developed an internal health dashboard of Iris Messenger product, to be used by the Fantasy Sports team as part of a cross-product collaboration. Created a REST API to digest and display useful server metrics on a web-based dashboard interface'
+  skills:
+    - 'JavaScript'
+    - 'Node.js'
+    - 'HTML'
+    - 'CSS'
+- company: 'Lam Research'
+  role: 'IT R&D Intern'
+  start: 'Jun 2015'
+  end: 'Sept 2015'
+  tasks:
+    - 'Ran a proof-of-concept on Splunk. Used historical log data and 3 test servers to install, configure, and manage a Splunk instance. Created 3 dashboards for Lam’s needs, and presented findings to the CIO. The department spent $100K on Splunk when I left'
+  skills:
+    - 'Splunk'
+    - 'JavaScript'
+    - 'XML'
+    - 'Log Analysis'
