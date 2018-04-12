@@ -13,6 +13,23 @@ html
 body
     font-size: 1em
     font-family: $serif
+    display: grid
+    grid: "main sidebar" / 2fr 1fr
+    grid-gap: 3px
+    justify-content: center
+    background-color: #f9f9f9
+
+main
+    grid-column: main / main
+
+aside
+    grid-column: sidebar / sidebar
+
+article
+    border: 1px solid rgba(0,0,0,0.2)
+    background-color: #fff
+    padding: 5px 10px
+    margin-bottom: 1.5em
 
 section
     margin-left: auto
