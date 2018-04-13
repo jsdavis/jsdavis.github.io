@@ -21,22 +21,27 @@ html
     width: 98%
     margin-left: auto
     margin-right: auto
-    max-width: 992px
+    max-width: 1200px
 
 body
     padding-top: 2em
     font: 1em $serif
-    display: grid
-    grid: "main sidebar" / 75% 25%
-    grid-gap: 1em
+    display: flex
+    flex: 1 0
+    flex-wrap: wrap
     justify-content: center
     background-color: $background
 
+nav
+    align-self: flex-start
+    flex: 0 0 200px
+
 main
-    grid-column: main / main
+    flex: 1
 
 aside
-    grid-column: sidebar / sidebar
+    align-self: flex-start
+    flex: 0 0 220px
     display: flex
     flex-direction: column
     a
@@ -187,9 +192,8 @@ code
                 content: '#{$i}%'
 
 @media screen and (max-width: 700px)
-    body
-        grid: [row1-start] "main" [row1-end] [row2-start] "sidebar" [row2-end]
-        grid-gap: 0
+    main, aside
+        flex-basis: 100%
 
     #education
         order: -2
