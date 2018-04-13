@@ -1,0 +1,72 @@
+langs:
+  -
+    name: 'Python'
+    level: 100
+  -
+    name: 'SQL'
+    level: 90
+  -
+    name: 'JavaScript'
+    level: 90
+  -
+    name: 'HTML'
+    level: 90
+  -
+    name: 'CSS'
+    level: 80
+  -
+    name: 'Sass'
+    level: 80
+  -
+    name: 'Java'
+    level: 80
+  -
+    name: 'Bash'
+    level: 70
+  -
+    name: 'C/C++'
+    level: 70
+  -
+    name: 'Haskell'
+    level: 60
+  -
+    name: 'OCaml'
+    level: 60
+  -
+    name: 'PHP'
+    level: 50
+
+tools:
+  -
+    name: 'Splunk'
+    level: 100
+  -
+    name: 'Git'
+    level: 100
+  -
+    name: 'py.test'
+    level: 100
+  -
+    name: 'Express'
+    level: 100
+  -
+    name: 'Node.js'
+    level: 90
+  -
+    name: 'Mocha'
+    level: 90
+  -
+    name: 'Chai'
+    level: 90
+  -
+    name: 'Jekyll'
+    level: 80
+  -
+    name: 'jQuery'
+    level: 70
+  -
+    name: 'Jenkins'
+    level: 60
+  -
+    name: 'Android'
+    level: 50

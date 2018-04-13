@@ -1,53 +1,122 @@
 ---
 ---
+@import url(//fonts.googleapis.com/css?family=Lato)
 
 $serif: Georgia, serif
 $sans-serif: Lato, sans-serif
+$black-sans-serif: 'Lato Black', Lato, sans-serif
+
+$background: #f9f9f9
+
+$card-border: rgba(0,0,128,0.2)
+$card-background: #fff
+
+$accent: #3D5AFE
+$blue: #3F51B5
+$text: #616161
 
 html
+    color: $text
     width: 98%
     margin-left: auto
     margin-right: auto
     max-width: 992px
 
 body
-    font-size: 1em
-    font-family: $serif
+    padding-top: 2em
+    font: 1em $serif
+    display: grid
+    grid: "main sidebar" / 75% 25%
+    grid-gap: 1em
+    justify-content: center
+    background-color: $background
+
+main
+    grid-column: main / main
+
+aside
+    grid-column: sidebar / sidebar
+    display: flex
+    flex-direction: column
+    a
+        color: $text
+        display: block
+        padding: 0.5em
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
+        svg
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 0.5em
+        &:visited
+            color: $text
+        &:hover
+            text-decoration: none
+            background: rgba(0,0,0,0.05)
+            border-radius: 3px
+            color: $blue
+
+article
+    border: 1px solid $card-border
+    background-color: $card-background
+    border-radius: 5px
+    padding: 5px 10px
+
+    &:not(:last-child)
+        margin-bottom: 1.5em
 
 section
+    width: 98%
     margin-left: auto
     margin-right: auto
-    width: 98%
+    margin-bottom: 2em
 
 a
     text-decoration: none
+    color: $blue
+    &:hover
+        text-decoration: underline
+    &:visited
+        color: $blue
 
-a:hover
-    text-decoration: underline
 
-a:visited
-    color: blue
+ul
+    clear: both
+    padding-left: 1em
+    line-height: 1.33em
 
 h1
-    font-family: $sans-serif
-    font-size: 2em
+    margin-top: 0
+    font: 2em $sans-serif
     text-align: center
 
 h2
-    font-family: Lato Black, $sans-serif
-    font-size: 0.75em
+    color: $blue
+    font: 0.75em $black-sans-serif
+
+%card-titles
+    line-height: 1em
+    margin-top: 0.1em
+    margin-bottom: 0.5em
+    font-family: $sans-serif
 
 h3
+    @extend %card-titles
+    color: $blue
+    font-size: 1.1em
+    display: block
+    float: left
+    font-weight: bold
+
+h4
+    @extend %card-titles
+    clear: both
     font-size: 1em
     font-weight: normal
-
-p, ul
-    font-size: 0.917em
 
 hr
     height: 0.1em
     border: 0
-    background-color: black
+    background-color: $blue
     margin-top: 1.5em
     margin-bottom: -5px
 
@@ -67,5 +136,44 @@ table
     td:last-child
         text-align: right
 
-.right
+time
     float: right
+    font-size: 0.75em
+    display: inline
+
+code
+    display: inline-block
+    border: 1px solid $card-border
+    background: $background
+    padding: 2px 3px
+    margin-right: 3px
+    border-radius: 3px
+    margin-bottom: 0.33em
+
+.lang
+    display: block
+    padding: 5px
+    border-radius: 3px
+    margin-bottom: 3px
+    border: 1px solid $card-border
+
+@each $i in 50, 60, 70, 80, 90, 100
+    .lang-#{$i}
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1% * $i, transparent 1% * $i)
+        &:hover
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1% * $i, transparent 1% * $i)
+            &::after
+                float: right
+                content: '#{$i}%'
+
+@media screen and (max-width: 700px)
+    body
+        grid: [row1-start] "main" [row1-end] [row2-start] "sidebar" [row2-end]
+        grid-gap: 0
+
+    #education
+        order: -2
+    #links
+        order: -1
+
+

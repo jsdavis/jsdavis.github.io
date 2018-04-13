@@ -1,82 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jacob Davis Resume</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jacob Davis Resume</title>
+	<link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <main>
-    <header id='header'>
-      <h1>{{ site.resume_name }}</h1>
-      <table>
-        <tr>
-          <td>{{ site.resume_location }}</td>
-          <td><a href='mailto://{{ site.email }}'>{{ site.email }}</a></td>
-          <td><a href='tel://{{ site.phone }}'>{{ site.phone }}</a></td>
-        </tr>
-        <tr>
-          <td></td>
-          {% for link in site.data.links %}
-          <td><a href='{{ link.href }}'>{{ link.text }}</a></td>
-          {% endfor %}
-        </tr>
-      </table>
-    </header>
+	<main>
+		<header id='header'>
+			<h1>{{ site.resume_name }}</h1>
+		</header>
 
-    <hr />
-    <section id='education'>
-      <h2>EDUCATION</h2>
-      {% for edu in site.data.education %}
-      <article>
-        <h3>{{ edu.school }}<time class='right'>{{ edu.start }} – {{ edu.end }}</time></h3>
-        <ul>
-          <li>{{ edu.degree }} expected June 2018. {{ edu.gpa }} GPA</li>
-        </ul>
-      </article>
-      {% endfor %}
-    </section>
+		<section id='experience'>
+			<h2>WORK EXPERIENCE</h2>
+			{% for job in site.data.experience %}
+			<article>
+				<h3>{{ job.company }}</h3>
+				<time>{{ job.start }} – {{ job.end }}</time>
+				<h4>{{ job.role }}</h4>
+				<ul>
+					{% for task in job.tasks %}
+					<li>{{ task }}</li>
+					{% endfor %}
+				</ul>
+				{% for skill in job.skills %}
+				<code>{{ skill }}</code>
+				{% endfor %}
+			</article>
+			{% endfor %}
+		</section>
 
-    <hr />
-    <section id='experience'>
-      <h2>WORK EXPERIENCE</h2>
-  		{% for job in site.data.experience %}
-      <article>
-        <h3>{{ job.company }} – {{ job.role }}<time class='right'>{{ job.start }} – {{ job.end }}</time></h3>
-        <ul>
-        	{% for task in job.tasks %}
-          <li>{{ task }}</li>
-          {% endfor %}
-        </ul>
-      </article>
-      {% endfor %}
-    </section>
+		<section id='leadership'>
+			<h2>LEADERSHIP</h2>
+			{% for pos in site.data.leadership %}
+			<article>
+				<h3>{{ pos.org }}</h3>
+				<time>{{ pos.start }} – {{ pos.end }}</time>
+				<ul>
+					{% for position in pos.positions %}
+					<li>{{ position }}</li>
+					{% endfor %}
+				</ul>
+			</article>
+			{% endfor %}
+		</section>
+	</main>
 
-    <hr />
-    <section id='leadership'>
-      <h2>LEADERSHIP</h2>
-      {% for pos in site.data.leadership %}
-      <article>
-        <h3>{{ pos.org }}<time class='right'>{{ pos.start }} – {{ pos.end }}</time></h3>
-        <ul>
-          {% for position in pos.positions %}
-          <li>{{ position }}</li>
-          {% endfor %}
-        </ul>
-      </article>
-      {% endfor %}
-    </section>
+	<aside>
+		<section id='links'>
+			<h2>LINKS</h2>
+			{% for link in site.data.links %}
+			<a href='{{ link.href }}'><i class="{{ link.icon }}"></i>{{ link.text }}</a>
+			{% endfor %}
+		</section>
 
-    <hr />
-    <section id='skills'>
-      <h2>SKILLS</h2>
-      <ul>
-        <li>Advanced – Python ● SQL (esp. Teradata) ● JavaScript (Client &amp; Server) ● HTML/CSS</li>
-        <li>Intermediate – Java ● Splunk ● PHP ● C/C++</li>
-      </ul>
-    </section>
-  </main>
+		<section id='education'>
+			<h2>EDUCATION</h2>
+			{% for edu in site.data.education %}
+			<article>
+				<h3>{{ edu.school }}</h3>
+				<time>{{ edu.start }} – {{ edu.end }}</time>
+				<ul>
+					<li>{{ edu.degree }} expected June 2018</li>
+					<li>{{ edu.gpa }} GPA</li>
+				</ul>
+			</article>
+			{% endfor %}
+		</section>
+
+		<section id='langs'>
+			<h2>LANGUAGES</h2>
+			<p>
+				{% for lang in site.data.skills.langs %}
+				<span class='lang lang-{{ lang.level }}'>{{ lang.name }}</span>
+				{% endfor %}
+			</p>
+		</section>
+
+		<section id='tools'>
+			<h2>TOOLS &amp; LIBRARIES</h2>
+			<p>
+				{% for tool in site.data.skills.tools %}
+				<span class='lang lang-{{ tool.level }}'>{{ tool.name }}</span>
+				{% endfor %}
+			</p>
+		</section>
+	</aside>
 </body>
 </html>
