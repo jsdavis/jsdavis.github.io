@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Jacob Davis Resume</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 </head>
@@ -50,10 +50,12 @@
 	</main>
 
 	<aside>
-		<h2>LINKS</h2>
-				{% for link in site.data.links %}
-				<a href='{{ link.href }}'><i class="{{ link.icon }}"></i>{{ link.text }}</a>
-				{% endfor %}
+		<section id='links'>
+			<h2>LINKS</h2>
+			{% for link in site.data.links %}
+			<a href='{{ link.href }}'><i class="{{ link.icon }}"></i>{{ link.text }}</a>
+			{% endfor %}
+		</section>
 
 		<section id='education'>
 			<h2>EDUCATION</h2>
@@ -62,18 +64,29 @@
 				<h3>{{ edu.school }}</h3>
 				<time>{{ edu.start }} – {{ edu.end }}</time>
 				<ul>
-					<li>{{ edu.degree }} expected June 2018. {{ edu.gpa }} GPA</li>
+					<li>{{ edu.degree }} expected June 2018</li>
+					<li>{{ edu.gpa }} GPA</li>
 				</ul>
 			</article>
 			{% endfor %}
 		</section>
 
-		<section id='skills'>
-			<h2>SKILLS</h2>
-			<ul>
-				<li>Advanced – Python ● SQL (esp. Teradata) ● JavaScript (Client &amp; Server) ● HTML/CSS</li>
-				<li>Intermediate – Java ● Splunk ● PHP ● C/C++</li>
-			</ul>
+		<section id='langs'>
+			<h2>LANGUAGES</h2>
+			<p>
+				{% for lang in site.data.skills.langs %}
+				<span class='lang lang-{{ lang.level }}'>{{ lang.name }}</span>
+				{% endfor %}
+			</p>
+		</section>
+
+		<section id='tools'>
+			<h2>TOOLS &amp; LIBRARIES</h2>
+			<p>
+				{% for tool in site.data.skills.tools %}
+				<span class='lang lang-{{ tool.level }}'>{{ tool.name }}</span>
+				{% endfor %}
+			</p>
 		</section>
 	</aside>
 </body>
