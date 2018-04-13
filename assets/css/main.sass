@@ -5,6 +5,7 @@
 $serif: Georgia, serif
 $sans-serif: Lato, sans-serif
 $black-sans-serif: 'Lato Black', Lato, sans-serif
+$code: monospace
 
 $background: #f9f9f9
 
@@ -78,11 +79,20 @@ a
     &:visited
         color: $blue
 
-
 ul
     clear: both
     padding-left: 1em
     line-height: 1.33em
+
+dl
+    line-height: 1.33em
+
+dt:not(:first-child)
+    margin-top: 1em
+
+dd
+    clear: both
+    margin-left: 1.33em
 
 h1
     margin-top: 0
@@ -92,6 +102,9 @@ h1
 h2
     color: $blue
     font: 0.75em $black-sans-serif
+
+p
+    margin: 0
 
 %card-titles
     line-height: 1em
@@ -110,6 +123,12 @@ h3
 h4
     @extend %card-titles
     clear: both
+    font-size: 1em
+    font-weight: normal
+
+h5
+    @extend %card-titles
+    float: left
     font-size: 1em
     font-weight: normal
 
@@ -142,6 +161,7 @@ time
     display: inline
 
 code
+    font-family: $code
     display: inline-block
     border: 1px solid $card-border
     background: $background
@@ -175,5 +195,21 @@ code
         order: -2
     #links
         order: -1
+
+    h3, time
+        float: none
+
+    dt time
+        float: right
+
+    article
+        display: flex
+        flex-direction: column
+        h3
+            order: -3
+        h4
+            order: -2
+        time
+            order: -1
 
 

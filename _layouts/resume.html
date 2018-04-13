@@ -26,24 +26,33 @@
 					<li>{{ task }}</li>
 					{% endfor %}
 				</ul>
-				{% for skill in job.skills %}
-				<code>{{ skill }}</code>
-				{% endfor %}
+				<p>
+					{% for skill in job.skills %}
+					<code>{{ skill }}</code>
+					{% endfor %}
+				</p>
 			</article>
 			{% endfor %}
 		</section>
 
 		<section id='leadership'>
 			<h2>LEADERSHIP</h2>
-			{% for pos in site.data.leadership %}
+			{% for org in site.data.leadership %}
 			<article>
-				<h3>{{ pos.org }}</h3>
-				<time>{{ pos.start }} – {{ pos.end }}</time>
-				<ul>
-					{% for position in pos.positions %}
-					<li>{{ position }}</li>
+				<h3>{{ org.org }}</h3>
+				<time>{{ org.start }} – {{ org.end }}</time>
+				<div style="clear: both;"></div>
+				<dl>
+					{% for pos in org.positions %}
+					<dt><h5>{{ pos.name }}</h5><time>{{ pos.time }}</dt>
+					<dd>{{ pos.duties }}</dd>
 					{% endfor %}
-				</ul>
+				</dl>
+				<p>
+					{% for skill in org.skills %}
+					<code>{{ skill }}</code>
+					{% endfor %}
+				</p>
 			</article>
 			{% endfor %}
 		</section>
