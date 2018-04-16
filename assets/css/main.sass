@@ -33,15 +33,17 @@ body
     background-color: $background
 
 nav
-    align-self: flex-start
     flex: 0 0 200px
+    text-align: right
 
 main
     flex: 1
 
 aside
-    align-self: flex-start
     flex: 0 0 220px
+
+.sidebar
+    align-self: flex-start
     display: flex
     flex-direction: column
     a
@@ -53,10 +55,13 @@ aside
             margin-top: auto
             margin-bottom: auto
             margin-right: 0.5em
+        &.active
+            color: $blue
+            &:visited
+                color: $blue
         &:visited
             color: $text
         &:hover
-            text-decoration: none
             background: rgba(0,0,0,0.05)
             border-radius: 3px
             color: $blue
@@ -78,11 +83,6 @@ section
 
 a
     text-decoration: none
-    color: $blue
-    &:hover
-        text-decoration: underline
-    &:visited
-        color: $blue
 
 ul
     clear: both
