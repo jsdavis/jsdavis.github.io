@@ -26,28 +26,32 @@ html
 body
     padding-top: 2em
     font: 1em $serif
-    display: flex
-    flex: 1 0
-    flex-wrap: wrap
+    display: grid
+    grid: "nav main sidebar" / 175px 1fr 220px
     justify-content: center
     background-color: $background
 
 nav
-    flex: 0 0 200px
+    position: fixed
     text-align: right
     a
         font: 1.25em $sans-serif
     .sub a
         font-size: .75em
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1)
 
 main
-    flex: 1
+    grid-area: main
 
 aside
-    flex: 0 0 220px
+    grid-area: sidebar
+
+div.sidebar
+    grid-area: nav
+    justify-self: stretch
 
 .sidebar
-    align-self: flex-start
+    justify-self: center
     display: flex
     flex-direction: column
     a
@@ -60,6 +64,7 @@ aside
             margin-bottom: auto
             margin-right: 0.5em
         &.active
+            font-weight: bold
             color: $blue
             &:visited
                 color: $blue
@@ -83,7 +88,9 @@ section
     width: 98%
     margin-left: auto
     margin-right: auto
-    margin-bottom: 2em
+    box-sizing: border-box
+    &:not(:first-child)
+        margin-top: 2em
 
 a
     text-decoration: none
@@ -195,14 +202,28 @@ code
                 float: right
                 content: '#{$i}%'
 
+@media screen and (max-width: 900px)
+    body
+        grid: [row1-start] "nav sidebar" [row1-end] [row2-start] "main sidebar" [row2-end] / 1fr 220px
+    nav
+        position: relative
+        text-align: center
+        .sub
+            display: none
+
+    h1
+        margin-bottom: 0
+
+
 @media screen and (max-width: 700px)
-    main, aside
-        flex-basis: 100%
+    body
+        grid: [row1-start] "nav" [row1-end] [row2-start] "main" [row2-end] [row3-start] "sidebar" [row3-end] / 1fr
 
     #education
         order: -2
     #links
         order: -1
+
 
     h3, time
         float: none
