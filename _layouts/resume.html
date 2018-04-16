@@ -18,6 +18,7 @@
       <div class="sub">
         <a href="#experience">Experience</a>
         <a href="#leadership">Leadership</a>
+        <a href="#projects">Projects</a>
       </div>
     </nav>
   </div>
@@ -64,6 +65,29 @@
         </p>
       </article>
       {% endfor %}
+    </section>
+
+    <section id='projects'>
+    	<h2>PROJECTS</h2>
+    	{% for project in site.data.projects %}
+    	<article>
+    		<h3>{{ project.name }}</h3>
+    		<time>{{ project.start }} – {{ project.end }}</time>
+    		{% if project.position != null %}
+    		<h4>{{ project.position }}</h4>
+    		{% endif %}
+    		<ul>
+    			{% for task in project.tasks %}
+    			<li>{{ task }}</li>
+    			{% endfor %}
+    		</ul>
+    		<p>
+    			{% for skill in project.skills %}
+    			<code>{{ skill }}</code>
+    			{% endfor %}
+    		</p>
+    	</article>
+    	{% endfor %}
     </section>
   </main>
 
