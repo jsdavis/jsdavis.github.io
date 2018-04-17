@@ -47,6 +47,13 @@ window.addEventListener('scroll', () => {
         return
     }
 
-    for (let l of NavLinks)
+    NavLinks.forEach(l => {
         if (l.shouldBeActive()) l.activate();
+    });
+});
+
+// Add link icon to linked cards
+const links = Array.from(document.querySelectorAll('a.card p'));
+links.forEach(l => {
+    l.innerHTML += '<i class="fas fa-external-link-square-alt"></i>';
 });
