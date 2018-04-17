@@ -1,0 +1,24 @@
+<div class='sidebar'>
+  <nav>
+    <header id='header'>
+      <h1>{{ site.resume_name }}</h1>
+    </header>
+    {% for link in site.data.nav %}
+      {% capture linkName %}
+        {{ link.name | downcase }}
+      {% endcapture %}
+      {% capture active %}
+        {{ include.active }}
+      {% endcapture %}
+
+      <a href="{{ link.href }}" {% if active == linkName %} class='active' {% endif %}>{{ link.name }}</a>
+      {% if link.sub %}
+        <div class="sub">
+          {% for subl in link.sub %}
+            <a href="#{{ subl.name | downcase }}">{{ subl.name }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</div>

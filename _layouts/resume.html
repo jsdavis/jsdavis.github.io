@@ -9,90 +9,11 @@
 </head>
 
 <body>
-  <div class='sidebar'>
-    <nav>
-      <header id='header'>
-        <h1>{{ site.resume_name }}</h1>
-      </header>
-      <a href="/" class='active'>Résumé</a>
-      <div class="sub">
-        <a href="#experience">Experience</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#projects">Projects</a>
-      </div>
-    </nav>
-  </div>
+	{% include nav.html active='résumé' %}
   <main>
-
-    <section id='experience'>
-      <h2>WORK EXPERIENCE</h2>
-      {% for job in site.data.experience %}
-      <article class='card'>
-        <h3>{{ job.company }}</h3>
-        <time>{{ job.start }} – {{ job.end }}</time>
-        <h4>{{ job.role }}</h4>
-        <ul>
-          {% for task in job.tasks %}
-          <li>{{ task }}</li>
-          {% endfor %}
-        </ul>
-        <p>
-          {% for skill in job.skills %}
-          <code>{{ skill }}</code>
-          {% endfor %}
-        </p>
-      </article>
-      {% endfor %}
-    </section>
-
-    <section id='leadership'>
-      <h2>LEADERSHIP</h2>
-      {% for org in site.data.leadership %}
-      <article class='card'>
-        <h3>{{ org.org }}</h3>
-        <time>{{ org.start }} – {{ org.end }}</time>
-        <div style="clear: both;"></div>
-        <dl>
-          {% for pos in org.positions %}
-          <dt><h5>{{ pos.name }}</h5><time>{{ pos.time }}</dt>
-          <dd>{{ pos.duties }}</dd>
-          {% endfor %}
-        </dl>
-        <p>
-          {% for skill in org.skills %}
-          <code>{{ skill }}</code>
-          {% endfor %}
-        </p>
-      </article>
-      {% endfor %}
-    </section>
-
-    <section id='projects'>
-    	<h2>PROJECTS</h2>
-    	{% for project in site.data.projects %}
-    	<a href='{{ project.link }}' class='card'>
-	    		<h3>{{ project.name }}</h3>
-	    		{% if project.start != null %}
-	    			<time>{{ project.start }} – {{ project.end }}</time>
-	    		{% elsif project.time != null %}
-	    			<time>{{ project.time }}</time>
-	    		{% endif %}
-	    		{% if project.subtitle != null %}
-	    			<h4>{{ project.subtitle }}</h4>
-	    		{% endif %}
-	    		<ul>
-	    			{% for task in project.tasks %}
-	    			<li>{{ task }}</li>
-	    			{% endfor %}
-	    		</ul>
-	    		<p>
-	    			{% for skill in project.skills %}
-	    			<code>{{ skill }}</code>
-	    			{% endfor %}
-	    		</p>
-	    </a>
-    	{% endfor %}
-    </section>
+  	{% include section.html id='experience' title='WORK EXPERIENCE' cards=site.data.experience %}
+  	{% include section.html id='leadership' title='LEADERSHIP' cards=site.data.leadership %}
+  	{% include section.html id='projects' title='PROJECTS' cards=site.data.projects %}
   </main>
 
   <aside class='sidebar'>
@@ -103,19 +24,7 @@
       {% endfor %}
     </section>
 
-    <section id='education'>
-      <h2>EDUCATION</h2>
-      {% for edu in site.data.education %}
-      <article class='card'>
-        <h3>{{ edu.school }}</h3>
-        <time>{{ edu.start }} – {{ edu.end }}</time>
-        <ul>
-          <li>{{ edu.degree }} expected June 2018</li>
-          <li>{{ edu.gpa }} GPA</li>
-        </ul>
-      </article>
-      {% endfor %}
-    </section>
+    {% include section.html id='education' title='EDUCATION' cards=site.data.education %}
 
     <section id='langs'>
       <h2>LANGUAGES</h2>

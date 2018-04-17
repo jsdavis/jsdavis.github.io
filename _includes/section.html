@@ -1,0 +1,54 @@
+<section id='{{ include.id }}'>
+  <h2>{{ include.title }}</h2>
+
+  {% for card in include.cards %}
+    {% if card.link %}
+      <a class='card' href='{{ card.link }}'>
+    {% else %}
+      <article class='card'>
+    {% endif %}
+
+      <h3>{{ card.entity }}</h3>
+
+      {% if card.start %}
+        <time>{{ card.start }} – {{ card.end }}</time>
+      {% elsif card.time %}
+        <time>{{ card.time }}</time>
+      {% endif %}
+
+      {% if card.role %}
+        <h4>{{ card.role }}</h4>
+      {% endif %}
+
+      {% if card.positions %}
+        <div style="clear: both;"></div>
+        <dl>
+          {% for pos in card.positions %}
+            <dt><h5>{{ pos.name }}</h5><time>{{ pos.time }}</dt>
+            <dd>{{ pos.duties }}</dd>
+          {% endfor %}
+        </dl>
+
+      {% elsif card.tasks %}
+        <ul>
+          {% for task in card.tasks %}
+            <li>{{ task }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+
+      <p>
+        {% for skill in card.skills %}
+          <code>{{ skill }}</code>
+        {% endfor %}
+      </p>
+
+    {% if card.link %}
+      </a>
+    {% else %}
+      </article>
+    {% endif %}
+
+  {% endfor %}
+</section>
