@@ -78,27 +78,6 @@ div.sidebar
             border-radius: 3px
             color: $blue
 
-.card
-    display: flex
-    align-items: center
-    border: 1px solid $card-border
-    background-color: $card-background
-    border-radius: 5px
-    padding: 5px 10px
-    display: block
-
-    &:not(:last-child)
-        margin-bottom: 1.5em
-    svg
-        vertical-align: center
-        float: right
-        transition: $transition
-
-a.card:hover
-    border: 1px solid $accent
-    svg
-        color: $accent
-
 section
     width: 98%
     margin-left: auto
@@ -136,9 +115,6 @@ h2
     font: 0.75em $sans-serif
     font-weight: 900
 
-p
-    margin: 0
-
 %card-titles
     line-height: 1em
     margin-top: 0.1em
@@ -165,18 +141,8 @@ h5
     font-size: 1em
     font-weight: normal
 
-#header
-    font-family: $sans-serif
-
-    td
-        width: 33.33%
-        text-align: center
-
-    td:first-child
-        text-align: left
-
-    td:last-child
-        text-align: right
+p
+    margin: 0
 
 time
     float: right
@@ -193,7 +159,29 @@ code
     border-radius: 3px
     margin-bottom: 0.33em
 
+.card
+    display: flex
+    align-items: center
+    border: 1px solid $card-border
+    background-color: $card-background
+    border-radius: 5px
+    padding: 5px 10px
+    display: block
+
+    &:not(:last-child)
+        margin-bottom: 1.5em
+    svg
+        vertical-align: center
+        float: right
+        transition: $transition
+
+a.card:hover
+    border: 1px solid $accent
+    svg
+        color: $accent
+
 .lang
+    font: 1em $sans-serif
     display: block
     padding: 5px
     border-radius: 3px

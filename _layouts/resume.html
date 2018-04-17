@@ -11,9 +11,9 @@
 <body>
 	{% include nav.html active='résumé' %}
   <main>
-  	{% include section.html id='experience' title='WORK EXPERIENCE' cards=site.data.experience %}
-  	{% include section.html id='leadership' title='LEADERSHIP' cards=site.data.leadership %}
-  	{% include section.html id='projects' title='PROJECTS' cards=site.data.projects %}
+  	{% include section.html id='experience' title='work experience' cards=site.data.experience %}
+  	{% include section.html id='leadership' cards=site.data.leadership %}
+  	{% include section.html id='projects' cards=site.data.projects %}
   </main>
 
   <aside class='sidebar'>
@@ -30,7 +30,7 @@
       <h2>LANGUAGES</h2>
       <p>
         {% for lang in site.data.skills.langs %}
-        <span class='lang lang-{{ lang.level }}'>{{ lang.name }}</span>
+        	<span class='lang lang-{{ lang.level }}'>{{ lang.name }}</span>
         {% endfor %}
       </p>
     </section>

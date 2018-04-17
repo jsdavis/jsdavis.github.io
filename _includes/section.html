@@ -1,5 +1,9 @@
 <section id='{{ include.id }}'>
-  <h2>{{ include.title }}</h2>
+  {% if include.title %}
+    <h2>{{ include.title | upcase }}</h2>
+  {% else %}
+    <h2>{{ include.id | upcase }}</h2>
+  {% endif %}
 
   {% for card in include.cards %}
     {% if card.link %}
@@ -20,12 +24,12 @@
         <h4>{{ card.role }}</h4>
       {% endif %}
 
-      {% if card.positions %}
+      {% if card.roles %}
         <div style="clear: both;"></div>
         <dl>
-          {% for pos in card.positions %}
-            <dt><h5>{{ pos.name }}</h5><time>{{ pos.time }}</dt>
-            <dd>{{ pos.duties }}</dd>
+          {% for role in card.roles %}
+            <dt><h5>{{ role.name }}</h5><time>{{ role.time }}</dt>
+            <dd>{{ role.tasks }}</dd>
           {% endfor %}
         </dl>
 
