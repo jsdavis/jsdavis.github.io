@@ -18,6 +18,7 @@
       <div class="sub">
         <a href="#experience">Experience</a>
         <a href="#leadership">Leadership</a>
+        <a href="#projects">Projects</a>
       </div>
     </nav>
   </div>
@@ -26,7 +27,7 @@
     <section id='experience'>
       <h2>WORK EXPERIENCE</h2>
       {% for job in site.data.experience %}
-      <article>
+      <article class='card'>
         <h3>{{ job.company }}</h3>
         <time>{{ job.start }} – {{ job.end }}</time>
         <h4>{{ job.role }}</h4>
@@ -47,7 +48,7 @@
     <section id='leadership'>
       <h2>LEADERSHIP</h2>
       {% for org in site.data.leadership %}
-      <article>
+      <article class='card'>
         <h3>{{ org.org }}</h3>
         <time>{{ org.start }} – {{ org.end }}</time>
         <div style="clear: both;"></div>
@@ -65,6 +66,33 @@
       </article>
       {% endfor %}
     </section>
+
+    <section id='projects'>
+    	<h2>PROJECTS</h2>
+    	{% for project in site.data.projects %}
+    	<a href='{{ project.link }}' class='card'>
+	    		<h3>{{ project.name }}</h3>
+	    		{% if project.start != null %}
+	    			<time>{{ project.start }} – {{ project.end }}</time>
+	    		{% elsif project.time != null %}
+	    			<time>{{ project.time }}</time>
+	    		{% endif %}
+	    		{% if project.subtitle != null %}
+	    			<h4>{{ project.subtitle }}</h4>
+	    		{% endif %}
+	    		<ul>
+	    			{% for task in project.tasks %}
+	    			<li>{{ task }}</li>
+	    			{% endfor %}
+	    		</ul>
+	    		<p>
+	    			{% for skill in project.skills %}
+	    			<code>{{ skill }}</code>
+	    			{% endfor %}
+	    		</p>
+	    </a>
+    	{% endfor %}
+    </section>
   </main>
 
   <aside class='sidebar'>
@@ -78,7 +106,7 @@
     <section id='education'>
       <h2>EDUCATION</h2>
       {% for edu in site.data.education %}
-      <article>
+      <article class='card'>
         <h3>{{ edu.school }}</h3>
         <time>{{ edu.start }} – {{ edu.end }}</time>
         <ul>
