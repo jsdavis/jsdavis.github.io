@@ -1,0 +1,6 @@
+- name: 'Résumé'
+  href: '/'
+  sub:
+    - name: 'Experience'
+    - name: 'Leadership'
+    - name: 'Projects'

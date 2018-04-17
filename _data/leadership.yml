@@ -1,19 +1,19 @@
-- org: 'Computer Science & Engineering Society'
+- entity: 'Computer Science & Engineering Society'
   start: 'Apr 2015'
   end: 'Jun 2018'
-  positions:
+  roles:
     -
       name: "VP Finance"
       time: "2017/18"
-      duties: "Found >$9000 in unused money after uncovering oversights from previous VP's. Also hosting 2-3 educational workshops per quarter"
+      tasks: "Found >$9000 in unused money after uncovering oversights from previous VP's. Also hosting 2-3 educational workshops per quarter"
     -
       name: "President"
       time: "2016/17"
-      duties: "Successfully increased CSES GBM attendance by over 200%, significantly improved board member participation, and hosted twice the number of events as in previous years"
+      tasks: "Successfully increased CSES GBM attendance by over 200%, significantly improved board member participation, and hosted twice the number of events as in previous years"
     -
       name: "CSE Day Co-Chair"
       time: "2015/16"
-      duties: "Increased attendance by 10% over previous year, and garnered most successful sponsorship in CSES history, with first ever profitable CSE Day"
+      tasks: "Increased attendance by 10% over previous year, and garnered most successful sponsorship in CSES history, with first ever profitable CSE Day"
   skills:
     - 'Community Leadership'
     - 'Team Management'

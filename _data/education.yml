@@ -1,5 +1,6 @@
-- school: 'UC San Diego'
-  degree: 'B.S. Computer Science'
+- entity: 'UC San Diego'
   start: '2014'
   end: '2018'
-  gpa: '3.363'
+  tasks:
+    - 'B.S. Computer Science expected June 2018'
+    - 'GPA: 3.363'

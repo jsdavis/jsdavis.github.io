@@ -1,72 +1,51 @@
 langs:
-  -
-    name: 'Python'
+  - name: 'Python'
     level: 100
-  -
-    name: 'SQL'
+  - name: 'SQL'
     level: 90
-  -
-    name: 'JavaScript'
+  - name: 'JavaScript'
     level: 90
-  -
-    name: 'HTML'
+  - name: 'HTML'
     level: 90
-  -
-    name: 'CSS'
+  - name: 'CSS'
     level: 80
-  -
-    name: 'Sass'
+  - name: 'Sass'
     level: 80
-  -
-    name: 'Java'
+  - name: 'Java'
     level: 80
-  -
-    name: 'Bash'
+  - name: 'Bash'
     level: 70
-  -
-    name: 'C/C++'
+  - name: 'C/C++'
     level: 70
-  -
-    name: 'Haskell'
+  - name: 'Haskell'
     level: 60
-  -
-    name: 'OCaml'
+  - name: 'OCaml'
     level: 60
-  -
-    name: 'PHP'
+  - name: 'PHP'
     level: 50
 
 tools:
-  -
-    name: 'Splunk'
+  - name: 'Splunk'
     level: 100
-  -
-    name: 'Git'
+  - name: 'Git'
     level: 100
-  -
-    name: 'py.test'
+  - name: 'py.test'
     level: 100
-  -
-    name: 'Express'
+  - name: 'Express'
     level: 100
-  -
-    name: 'Node.js'
+  - name: 'Node.js'
     level: 90
-  -
-    name: 'Mocha'
+  - name: 'Mocha & Chai'
     level: 90
-  -
-    name: 'Chai'
-    level: 90
-  -
-    name: 'Jekyll'
+  - name: 'Jekyll'
     level: 80
-  -
-    name: 'jQuery'
+  - name: 'Service Workers'
     level: 70
-  -
-    name: 'Jenkins'
+  - name: 'jQuery'
+    level: 70
+  - name: 'Firebase'
     level: 60
-  -
-    name: 'Android'
+  - name: 'Jenkins'
+    level: 60
+  - name: 'Android'
     level: 50
