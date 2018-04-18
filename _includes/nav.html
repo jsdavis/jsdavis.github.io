@@ -2,6 +2,7 @@
   <nav>
     <header id='header'>
       <h1>{{ site.resume_name }}</h1>
+      <img class='profile' alt='Jacob Davis' src=" {{ '/assets/img/profile.jpg' | relative_url }}">
     </header>
     {% for link in site.data.nav %}
       {% capture linkName %}
