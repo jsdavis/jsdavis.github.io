@@ -57,3 +57,18 @@ const links = Array.from(document.querySelectorAll('a.card p'));
 links.forEach(l => {
     l.innerHTML += '<i class="fas fa-external-link-square-alt"></i>';
 });
+
+// Handle nav on small screens
+const activeNav = document.querySelector('nav>.active');
+const activeSub = activeNav.parentNode.querySelector('.active+.sub');
+
+if (activeSub) {
+    activeNav.addEventListener('click', e => {
+        if (window.innerWidth > 900)
+            return;
+        activeSub.style.display = 'block';
+        e.preventDefault();
+    });
+}
+
+
