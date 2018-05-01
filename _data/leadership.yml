@@ -1,6 +1,7 @@
 - entity: 'Computer Science & Engineering Society'
   start: 'Apr 2015'
   end: 'Jun 2018'
+  link: 'https://cses.ucsd.edu'
   roles:
     -
       name: "VP Finance"
