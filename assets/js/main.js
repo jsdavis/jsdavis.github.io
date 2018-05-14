@@ -63,7 +63,7 @@ const activeNav = document.querySelector('nav>.active');
 const activeSub = document.querySelector('nav>.active+.sub');
 
 if (activeSub) {
-    activeNav.innerHTML += '<i data-fa-transform="shrink-6 down-1 right-6" class="icon fas fa-chevron-down"></i>';
+    activeNav.innerHTML += '<i data-fa-transform="shrink-6 down-1 right-6" class="mobile-only icon fas fa-chevron-down"></i>';
     activeNav.addEventListener('click', e => {
         if (window.innerWidth > 900)
             return;
@@ -81,5 +81,3 @@ if (activeSub) {
         e.preventDefault();
     });
 }
-
-
