@@ -1,3 +1,18 @@
+- entity: "BlueprintCS Event Website"
+  role: "CSES"
+  link: "https://github.com/ucsdcses/blueprintcs-live"
+  start: "May 1, 2018"
+  end: "May 13, 2018"
+  tasks:
+    - "Developed entire site for use as the home base during day long engineering event"
+    - "Designed vue.js components for site template, to be used for future events"
+  skills:
+    - "JavaScript"
+    - "HTML"
+    - "Vue.js"
+    - "Sass"
+    - "Gulp"
+    - "Webpack"
 - entity: "Armchair All-Americans"
   role: "Acting CTO"
   link: "https://armchairallamericans.com"

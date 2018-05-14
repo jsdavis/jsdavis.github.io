@@ -57,3 +57,27 @@ const links = Array.from(document.querySelectorAll('a.card p'));
 links.forEach(l => {
     l.innerHTML += '<i class="fas fa-external-link-square-alt"></i>';
 });
+
+// Handle nav on small screens
+const activeNav = document.querySelector('nav>.active');
+const activeSub = document.querySelector('nav>.active+.sub');
+
+if (activeSub) {
+    activeNav.innerHTML += '<i data-fa-transform="shrink-6 down-1 right-6" class="mobile-only icon fas fa-chevron-down"></i>';
+    activeNav.addEventListener('click', e => {
+        if (window.innerWidth > 900)
+            return;
+        activeSub.classList.toggle('visible');
+
+        const icon = activeNav.querySelector('.icon');
+        const str = ' rotate-180';
+        let data = icon.getAttribute('data-fa-transform');
+
+        if (!data.includes(str))
+            icon.setAttribute('data-fa-transform', data + str);
+        else
+            icon.setAttribute('data-fa-transform', data.replace(str, ''))
+
+        e.preventDefault();
+    });
+}

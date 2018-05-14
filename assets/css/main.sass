@@ -40,6 +40,10 @@ nav
         font: 1.25em $sans-serif
     .sub a
         font-size: .75em
+    img
+        max-width: 165px
+        margin-left: auto
+        margin-right: auto
 
 main
     grid-area: main
@@ -159,6 +163,9 @@ code
     border-radius: 3px
     margin-bottom: 0.33em
 
+.profile
+    border-radius: 5px
+
 .card
     display: flex
     align-items: center
@@ -188,6 +195,9 @@ a.card:hover
     margin-bottom: 3px
     border: 1px solid $card-border
 
+.mobile-only
+    display: none
+
 @each $i in 50, 60, 70, 80, 90, 100
     .lang-#{$i}
         background: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1% * $i, transparent 1% * $i)
@@ -205,9 +215,13 @@ a.card:hover
         text-align: center
         .sub
             display: none
+        .sub.visible
+            display: block
+        img
+            max-width: 70%
 
-    h1
-        margin-bottom: 0
+    .mobile-only
+        display: initial
 
 
 @media screen and (max-width: 700px)
@@ -236,5 +250,3 @@ a.card:hover
             order: -2
         time
             order: -1
-
-
