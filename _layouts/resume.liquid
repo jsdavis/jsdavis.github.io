@@ -9,11 +9,11 @@
 </head>
 
 <body>
-	{% include nav.html active='résumé' %}
+	{% include nav.liquid active='résumé' %}
   <main>
-  	{% include section.html id='experience' title='work experience' cards=site.data.experience %}
-  	{% include section.html id='leadership' cards=site.data.leadership %}
-  	{% include section.html id='projects' cards=site.data.projects %}
+  	{% include section.liquid id='experience' title='work experience' cards=site.data.experience %}
+  	{% include section.liquid id='leadership' cards=site.data.leadership %}
+  	{% include section.liquid id='projects' cards=site.data.projects %}
   </main>
 
   <aside class='sidebar'>
@@ -24,10 +24,10 @@
       {% endfor %}
     </section>
 
-    {% include section.html id='education' title='EDUCATION' cards=site.data.education %}
+    {% include section.liquid id='education' title='EDUCATION' cards=site.data.education %}
 
-    {% include langs.html id='langs' title='LANGUAGES' langs=site.data.skills.langs %}
-    {% include langs.html id='tools' title='TOOLS & LIBRARIES' langs=site.data.skills.tools %}
+    {% include langs.liquid id='langs' title='LANGUAGES' langs=site.data.skills.langs %}
+    {% include langs.liquid id='tools' title='TOOLS & LIBRARIES' langs=site.data.skills.tools %}
   </aside>
 </body>
 
