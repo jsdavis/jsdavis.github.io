@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlueprintCS Live 2018</title>
+    <link rel="stylesheet" type="text/css" href="/blueprint/assets/css/main.css">
+  </head>
+
+  <body>
+    <navbar id="nav">
+      <img slot="header" class="nav-logo" src="assets/img/logo.png">
+      <nav-section name="countdown">
+        <countdown :time="countdown.time" />
+      </nav-section>
+      <nav-section name="links">
+        <nav-link v-for="(link, idx) in navLink.links"
+          :key="'nav' + idx"
+          :name="link.name"
+          :href="link.href"
+          :internal="link.internal" />
+      </nav-section>
+    </navbar>
+    <main id="main">
+      <h1>Welcome to BlueprintCS 2018!</h1>
+      <section>
+        <box name="shirt colors">
+          <shirts :shirts="shirts" />
+        </box>
+        <box name="document examples">
+          <linklist :links="projects" />
+        </box>
+        <box name="submission">
+          <submission :guidelines="submission.guidelines" :link="submission.link" />
+        </box>
+        <box name="prizes">
+          <prizes :prizes="prizes" />
+        </box>
+      </section>
+      <section id="schedule">
+        <box name="schedule" full>
+          <schedule :schedule="schedule" />
+        </box>
+      </section>
+    </main>
+  <script type="text/javascript" src="runtime~main.16d65193cc2a39ddc271.js"></script><script type="text/javascript" src="vendors~main.d3b064dcfe030b65ef32.js"></script><script type="text/javascript" src="main.ccf4f1182d5ea6170f1d.js"></script></body>
+
+</html>

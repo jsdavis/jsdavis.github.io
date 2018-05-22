@@ -1,9 +1,9 @@
 langs:
   - name: 'Python'
     level: 100
-  - name: 'SQL'
-    level: 90
   - name: 'JavaScript'
+    level: 100
+  - name: 'SQL'
     level: 90
   - name: 'HTML'
     level: 90
@@ -35,10 +35,16 @@ tools:
     level: 100
   - name: 'Node.js'
     level: 90
+  - name: 'Gulp'
+    level: 90
   - name: 'Mocha & Chai'
     level: 90
   - name: 'Jekyll'
     level: 80
+  - name: 'Webpack'
+    level: 70
+  - name: 'Vue.js'
+    level: 70
   - name: 'Service Workers'
     level: 70
   - name: 'jQuery'
@@ -46,6 +52,8 @@ tools:
   - name: 'Firebase'
     level: 60
   - name: 'Jenkins'
+    level: 60
+  - name: 'pandas & numpy'
     level: 60
   - name: 'Android'
     level: 50

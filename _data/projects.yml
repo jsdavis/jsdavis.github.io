@@ -1,6 +1,6 @@
 - entity: "BlueprintCS Event Website"
   role: "CSES"
-  link: "https://github.com/ucsdcses/blueprintcs-live"
+  link: "/blueprint/"
   start: "May 1, 2018"
   end: "May 13, 2018"
   tasks:

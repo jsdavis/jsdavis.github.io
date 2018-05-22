@@ -1,0 +1,13 @@
+<section id='{{ include.id }}'>
+    {% if include.title %}
+        <h2>{{ include.title | upcase }}</h2>
+    {% else %}
+        <h2>{{ include.id | upcase }}</h2>
+    {% endif %}
+
+    <p>
+        {% for lang in include.langs %}
+            <span class='lang lang-{{ lang.level }}'>{{ lang.name }}</span>
+        {% endfor %}
+    </p>
+</section>
