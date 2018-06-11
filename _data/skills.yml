@@ -1,9 +1,9 @@
 langs:
   - name: 'Python'
     level: 100
-  - name: 'SQL'
-    level: 90
   - name: 'JavaScript'
+    level: 90
+  - name: 'SQL'
     level: 90
   - name: 'HTML'
     level: 90

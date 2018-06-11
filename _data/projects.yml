@@ -14,14 +14,14 @@
     - "Gulp"
     - "Webpack"
 - entity: "Armchair All-Americans"
-  role: "Acting CTO"
+  role: "Lead (Only) Developer"
   link: "https://armchairallamericans.com"
   start: "January 2017"
-  end: "Present"
+  end: "May 2018"
   tasks:
     - "Developed custom UI elements, such as the Mega Menu on homepage"
     - "Fully manage site operations: SSL, hosting, DNS, dependency updates, etc."
-    - "Develop custom WordPress plugins for site use, and/or evaluate, install, and configure existing plugins"
+    - "Developed custom WordPress plugin for site use, and evaluated, installed, and configured existing plugins throughout my time there"
     - "Developed internal Slack application for commonly used operations"
   skills:
     - "WordPress"
